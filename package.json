@@ -1,0 +1,11 @@
+{
+  "name": "preslovljivac",
+  "version": "1.0.26",
+  "description": "latin to cyrillic",
+  "main": "preslovljivac.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "baboslav",
+  "license": "ISC"
+}
