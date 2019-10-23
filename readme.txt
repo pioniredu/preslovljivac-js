@@ -1,4 +1,5 @@
-a very simple package for changing characters from latin to cyrillic (serbian).  
+a very simple package for changing characters from latin to cyrillic (serbian) and vice versa,  
+depending on which one is more abundant in text (it changes to the less abundant one).  
 example:  
 ``` javascript  
 const preslovljivac = require("preslovljivac"); //loading the package  
