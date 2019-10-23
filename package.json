@@ -1,11 +1,24 @@
 {
   "name": "preslovljivac",
-  "version": "1.0.26",
+  "version": "1.2.26",
   "description": "latin to cyrillic",
   "main": "preslovljivac.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "baboslav",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baboslav/preslovljivacJS.git"
+  },
+  "keywords": [
+    "preslovljivac",
+    "cyrillic",
+    "latin"
+  ],
+  "bugs": {
+    "url": "https://github.com/Baboslav/preslovljivacJS/issues"
+  },
+  "homepage": "https://github.com/Baboslav/preslovljivacJS#readme"
 }

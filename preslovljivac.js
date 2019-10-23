@@ -1,8 +1,16 @@
 module.exports = {
     preslovi: function (word) {
-        let regExp = /[^\u0400-\u04ff]/gui;
-        let cyrillicExists = word.match(regExp) || false;
-        if(cyrillicExists.length != word.length){
+        wordLat = word.slice(0, 512).match(/\w/) || 0;
+        let regExp = /\p{sc=Cyrillic}/gui;
+        let cyrillicExists = true;
+        if (wordLat != 0 && wordLat) {
+            wordLat = wordLat.length;
+        }
+        let counterCyrl = word.slice(0, 512).match(regExp) || 0;
+        if (counterCyrl != 0 && counterCyrl) {
+            counterCyrl = counterCyrl.length;
+        }
+        if ((wordLat - counterCyrl) > counterCyrl) {
             cyrillicExists = false;
         }
         const convMap = new Map([
@@ -118,14 +126,15 @@ module.exports = {
             ["Dž", "Џ"],
             ["Š", "Ш"],
         ]);
-        for (let k of convMap.keys()) {
-            if (cyrillicExists) {
-                console.log(`${word} ретард`);
-                break;
+        if (cyrillicExists) {
+            for (const [key,value] of convMap) {
+                word = word.replace(RegExp(`${value}`, `gu`),`${key}`);                                                                        //isus
             }
-           else {
+        }
+        else {
+            for (let k of convMap.keys()) {
                 word = word.replace(RegExp(k, 'gu'), convMap.get(k));
-           }
+            }
         }
         return word;
     }
