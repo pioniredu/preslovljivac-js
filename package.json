@@ -1,0 +1,31 @@
+{
+  "name": "preslovljivac",
+  "version": "2.1.22",
+  "description": "latin to cyrillic",
+  "main": "main.js",
+  "scripts": {
+    "test": "npx ava ./tests/main.js"
+  },
+  "devDependencies": {
+    "ava": "^2.4.0"
+  },
+  "author": "baboslav",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baboslav/preslovljivacJS.git"
+  },
+  "keywords": [
+    "preslovljivac",
+    "cyrillic",
+    "latin"
+  ],
+  "bugs": {
+    "url": "https://github.com/Baboslav/preslovljivacJS/issues"
+  },
+  "homepage": "https://github.com/Baboslav/preslovljivacJS#readme",
+  "dependencies": {},
+  "directories": {
+    "test": "tests"
+  }
+}
