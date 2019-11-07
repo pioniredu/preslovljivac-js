@@ -1,6 +1,6 @@
 {
   "name": "preslovljivac",
-  "version": "2.1.22",
+  "version": "2.1.23",
   "description": "latin to cyrillic",
   "main": "main.js",
   "scripts": {
@@ -28,3 +28,4 @@
   "directories": {
     "test": "tests"
   }
+}
