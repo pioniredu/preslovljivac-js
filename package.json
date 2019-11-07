@@ -1,10 +1,13 @@
 {
   "name": "preslovljivac",
-  "version": "2.1.11",
+  "version": "2.1.22",
   "description": "latin to cyrillic",
-  "main": "preslovljivac.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx ava ./tests/main.js"
+  },
+  "devDependencies": {
+    "ava": "^2.4.0"
   },
   "author": "baboslav",
   "license": "ISC",
@@ -20,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Baboslav/preslovljivacJS/issues"
   },
-  "homepage": "https://github.com/Baboslav/preslovljivacJS#readme"
-}
+  "homepage": "https://github.com/Baboslav/preslovljivacJS#readme",
+  "dependencies": {},
+  "directories": {
+    "test": "tests"
+  }
