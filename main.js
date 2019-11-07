@@ -120,6 +120,7 @@ module.exports = {
             ["x","кс"],
             ["y","иј"],
             ["w","в"],
+            ["q","ку"],
             ["A","А"],
             ["B","Б"],
             ["V","В"],
@@ -152,6 +153,7 @@ module.exports = {
             ["X","КС"],
             ["Y","ИЈ"],
             ["W","В"],
+            ["Q","КУ"],
         ]);
         if (tester(word)) {
             for (const [key, value] of convMap) {

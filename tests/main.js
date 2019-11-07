@@ -37,11 +37,13 @@ t.is(presumeCyrl,`123кјајаРетардАнјугпањокошКуРуЗЂ�
 t.is(presumeLat,`jajaRetardAnjugPanj123kokošKuRuZĐĐĐ`);
 });
 test(`специјали`, t => {
-	t.plan(3);
+	t.plan(4);
 	const w = preslovljivac.preslovi(`Ww`);
 	const y = preslovljivac.preslovi(`Yy`);
 	const x = preslovljivac.preslovi(`Xx`);
+	const q = preslovljivac.preslovi(`Qq`);
 	t.is(w,`Вв`);
 	t.is(y,`ИЈиј`);
 	t.is(x,`КСкс`);
+	t.is(q,'КУку');
 });
