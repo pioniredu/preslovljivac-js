@@ -1,6 +1,6 @@
 {
   "name": "preslovljivac",
-  "version": "2.1.25",
+  "version": "2.2.1",
   "description": "latin to cyrillic",
   "main": "main.js",
   "scripts": {

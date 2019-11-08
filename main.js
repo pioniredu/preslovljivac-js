@@ -1,22 +1,22 @@
 module.exports = {
     preslovi: function (word) {
-        let regExp = /\p{sc=Cyrillic}/gui;
-        let cyrillicExists = true;
+        let regExp = /\p{sc=Cyrillic}/gui;  //RegExp for matching cyrillic characters
+        let cyrillicExists = true;  //assumes cyrillic is more abundantly present with a boolean value
         let tester = function (word) {
-            let wordLat = word.slice(0, 512).match(/\w/gui) || false;
+            let wordLat = word.slice(0, 512).match(/\w/gui) || false;   //takes the latin characters from the first 512 characters in a string
             if (wordLat) {
-                wordLat = wordLat.length;
+                wordLat = wordLat.length;   //counts them, if there are any
             }
-            let counterCyrl = word.slice(0, 512).match(regExp) || false;
+            let counterCyrl = word.slice(0, 512).match(regExp) || false;    //takes the cyrillic characters from the first 512 characters in a string
             if (counterCyrl) {
-                counterCyrl = counterCyrl.length;
+                counterCyrl = counterCyrl.length;   //counts them, if there are any
             }
-            if (wordLat > counterCyrl) {
+            if (wordLat > counterCyrl) {    //if there's more latin than cyrillic, sets cyrillicExists to false, otherwise it remains true
                 cyrillicExists = false;
             }
-            return cyrillicExists;
+            return cyrillicExists;  //returns cyrillicExists, a boolean value that is used later
         }
-        const convMap = new Map([
+        const convMap = new Map([   //a map containing all of the characters and exceptions
             ["Panjeliniz", "Панјелиниз"],
             ["Konjug", "Конјуг"],
             ["Konjuk", "Конјук"],
@@ -156,13 +156,13 @@ module.exports = {
             ["Q","КУ"],
         ]);
         if (tester(word)) {
-            for (const [key, value] of convMap) {
-                word = word.replace(RegExp(`${value}`, `gu`), `${key}`);                                                                        //isus
+            for (const [key, value] of convMap) {   //if cyrillicExists is true, it replaces cyrillic with latin as latin was less abundant
+                word = word.replace(RegExp(`${value}`, `gu`), `${key}`);                                                                                                //isus
             }
         }
         else {
             for (let k of convMap.keys()) {
-                word = word.replace(RegExp(k, 'gu'), convMap.get(k));
+                word = word.replace(RegExp(k, 'gu'), convMap.get(k));   //if cyrillicExists is false, it replaces latin with cyrillic as cyrillic was less abundant
             }
         }
         return word;
