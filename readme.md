@@ -2,8 +2,6 @@ A very simple package for changing characters from latin to cyrillic (Serbian) a
   
 It only counts through the first 512 characters, so if you have some massive strings it  won't count through the entire string, so it may not be 100% accurate if both are abundant throughout the text. It will convert every character no matter the length of the string,  though.  
   
-I've linked the GitHub repository if you want to take a finer look at the inner workings.  
-  
 example:  
 ``` javascript  
 const preslovljivac = require("preslovljivac"); //loading the package  
