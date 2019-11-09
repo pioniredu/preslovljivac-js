@@ -16,3 +16,5 @@ Q (translated as "ку"),
 X (translated as "кс"),  
 Y (translated as "иј"),  
 W (translated as "в").  
+  
+you can check it out on npm as well: https://www.npmjs.com/package/preslovljivac  
