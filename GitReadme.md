@@ -26,4 +26,5 @@ X (translated as "кс"),
 Y (translated as "иј"),  
 W (translated as "в").  
   
-I've linked a GitHub page in case you want to take a look at the code and suggest any improvements.  
+Here's a link to the npm page: https://www.npmjs.com/package/preslovljivac  
+If you have any suggestions, feel free to send them to me. I'm always open for improvement.  
