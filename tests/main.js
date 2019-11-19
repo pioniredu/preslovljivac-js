@@ -49,8 +49,8 @@ test(`Специјали`, t => {
 });
 test(`Прескакање додатих изузетака`, t => {
 	t.plan(2);
-	const microsoft = preslovljivac.preslovi('Microsoft majkrosoft', 'Microsoft');
+	const microsoft = preslovljivac.preslovi('још речи, Microsoft, nasumične reči Google majkrosoft', 'Google, Microsoft');
 	const cyrlMicro = preslovljivac.preslovi('Мицро мица', 'Мицро');
-	t.is(microsoft, 'Microsoft мајкрософт');
+	t.is(microsoft, 'још речи, Microsoft, насумичне речи Google мајкрософт');
 	t.is(cyrlMicro, 'Мицро mica');
 });

@@ -1,12 +1,10 @@
 module.exports = {
     preslovi: function (word,exceptions) {
-        let opposExcept = [];   //an array to help us with the exceptions
         if(exceptions){ 
-         exceptions = exceptions.split(',');    //makes an array out of the passed string, if it exists
+         exceptions = exceptions.split(', ');    //makes an array out of the passed "exceptions" string, if it exists
         }
         else{
             exceptions = false; //exceptions are set to false, just in case
-            opposExcept = 0;    //the array is changed to a 0, to reduce allocated memory
         }
         let regExp = /\p{sc=Cyrillic}/gui;  //RegExp for matching cyrillic characters
         let cyrillicExists = true;  //assumes cyrillic is more abundantly present with a boolean value
@@ -178,12 +176,8 @@ const changer = function(word){ //declaring the logic as a function because we n
     }
         word = changer(word);   //applying the previously declared function
         if(exceptions){
-            for(const except of exceptions){    //if there are any exceptions, it will make a converted array out of them 
-                opposExcept.push(changer(except));
-            }
-            for(const except of exceptions)
-            for(const opposite of opposExcept){ //it goes through both arrays, if it detects a converted exception it changes it back
-                word = word.replace(RegExp(`${opposite}`,`gu`),`${except}`);
+            for(let i = 0; i < exceptions.length; ++i){ //it goes through the "exceptions" array, if it detects a converted exception it changes it back
+                word = word.replace(RegExp(`${changer(exceptions[i])}`,`gui`),`${exceptions[i]}`);
             }
         }
         return word;
