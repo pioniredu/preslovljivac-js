@@ -174,12 +174,19 @@ const changer = function(word){ //declaring the logic as a function because we n
         }
         return word;
     }
-        word = changer(word);   //applying the previously declared function
-        if(exceptions){
-            for(let i = 0; i < exceptions.length; ++i){ //it goes through the "exceptions" array, if it detects a converted exception it changes it back
-                word = word.replace(RegExp(`${changer(exceptions[i])}`,`gui`),`${exceptions[i]}`);
+    if(exceptions){ //if there are any exceptions, it adds them to the map
+        if(tester(word)){   //adds them this way if they are cyrillic
+        for (let except of exceptions){
+            convMap.set(except,changer(except));
+        }
+    }
+        else{
+            for(let except of exceptions){  //adds them the opposte way otherwise
+                convMap.set(changer(except),except);
             }
         }
+    }
+        word = changer(word);   //applying the previously declared function
         return word;
     }
 }
