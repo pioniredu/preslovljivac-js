@@ -54,3 +54,12 @@ test(`Прескакање додатих изузетака`, t => {
 	t.is(microsoft, 'још речи, Microsoft, насумичне речи Google мајкрософт');
 	t.is(cyrlMicro, 'Мицро mica');
 });
+test(`Експлицитно уношење писма`, t => {
+	t.plan(4);
+	const text = 'nasumičan tekst';
+	const cyrlText = 'насумичан текст';
+	t.is(preslovljivac.preslovi(text,'','Cyrl'), 'nasumičan tekst');
+	t.is(preslovljivac.preslovi(text,'','C'), 'насумичан текст');
+	t.is(preslovljivac.preslovi(cyrlText,'','Cyrl'), 'nasumičan tekst');
+	t.is(preslovljivac.preslovi(cyrlText,'','cd'),'насумичан текст');
+});
