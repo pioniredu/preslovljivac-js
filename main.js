@@ -9,7 +9,7 @@ module.exports = {
         }
         if(!type){
          tester = function (word) {
-            let regExp = /\p{sc=Cyrillic}/gui;  //RegExp for matching cyrillic characters
+            let regExp = /[\u{0400}-\u{04FF}]/gui;  //RegExp for matching cyrillic characters
             let cyrillicExists = true;  //assumes cyrillic is more abundantly present with a boolean value
             let wordLat = word.slice(0, 512).match(/\w/gui) || false;   //takes the latin characters from the first 512 characters in a string
             if (wordLat) {
