@@ -1,10 +1,10 @@
 {
   "name": "preslovljivac",
-  "version": "2.5.2",
+  "version": "2.5.11",
   "description": "latin to cyrillic",
   "main": "main.js",
   "scripts": {
-    "test": "npx ava ./tests/main.js"
+    "test": "npx ava ./tests/test.js"
   },
   "devDependencies": {
     "ava": "^2.4.0"

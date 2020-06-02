@@ -1,4 +1,4 @@
-const preslovljivac = require("preslovljivac");
+const preslovljivac = require("../main.js");
 const test = require('ava');
 test(`Основе пресловљивача`, t => {
 	t.plan(2);
