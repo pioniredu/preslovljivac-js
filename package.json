@@ -1,7 +1,7 @@
 {
-  "name": "preslovljivac",
-  "version": "2.5.11",
-  "description": "latin to cyrillic",
+  "name": "preslovljivac-js",
+  "version": "3.0.0",
+  "description": "script changer, Latn <-> Cyrl",
   "main": "main.js",
   "scripts": {
     "test": "npx ava ./tests/test.js"
@@ -9,23 +9,31 @@
   "devDependencies": {
     "ava": "^2.4.0"
   },
-  "author": "baboslav",
-  "license": "ISC",
+  "author": "Vuk",
+  "license": "GPL-3.0-only",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Baboslav/preslovljivacJS.git"
+    "url": "git+https://github.com/pioniredu/preslovljivac-js.git"
   },
   "keywords": [
     "preslovljivac",
+    "preslovljivac-js",
     "cyrillic",
     "latin"
   ],
   "bugs": {
-    "url": "https://github.com/Baboslav/preslovljivacJS/issues"
+    "url": "https://github.com/pioniredu/preslovljivac-js/issues"
   },
-  "homepage": "https://github.com/Baboslav/preslovljivacJS#readme",
-  "dependencies": {},
+  "homepage": "https://github.com/pioniredu/preslovljivac-js#readme",
+  "dependencies": {
+    "detektor": "^2.0.0"
+  },
   "directories": {
     "test": "tests"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
   }
 }
