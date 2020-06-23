@@ -1,4 +1,4 @@
-import preslovi from '../main.js';
+import preslovi from '@pionir/preslovljivac-js';
 const test = require('ava');
 test(`Основе пресловљивача`, t => {
 	t.plan(2);

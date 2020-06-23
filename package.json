@@ -1,5 +1,5 @@
 {
-  "name": "preslovljivac-js",
+  "name": "@pionir/preslovljivac-js",
   "version": "3.0.0",
   "description": "script changer, Latn <-> Cyrl",
   "main": "main.js",
