@@ -1,7 +1,7 @@
 {
   "name": "@pionir/preslovljivac-js",
   "version": "3.0.0",
-  "description": "script changer, Latn <-> Cyrl",
+  "description": "A simple transliteration library for Serbian language, written in Javascript and using ES Modules. ",
   "main": "main.js",
   "scripts": {
     "test": "npx ava ./tests/test.js"
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/pioniredu/preslovljivac-js#readme",
   "dependencies": {
-    "detektor": "^2.0.0"
+    "@pionir/detektor-js": "^2.0.0"
   },
   "directories": {
     "test": "tests"
