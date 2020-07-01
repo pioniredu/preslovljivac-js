@@ -27,14 +27,14 @@ t.is(djurdj, `đurđic`);
 });
 test(`Комплетно пресловљивање`, t => {
 	t.plan(4);
-const kompletCyrl = preslovi(`123kjajaRetardAnjugpanjokošKuRuZĐĐĐ`);
-const kompletLat = preslovi(`јајаРетардАнјугПањ123кокошКуРуЗЂЂЂ`);
-const presumeCyrl = preslovi(`123kjajaRetardAnjugpanjokoшКуРуЗЂЂЂ`);
-const presumeLat = preslovi(`јајаРетардАнјугПањ123коkošKuRuZĐĐĐ`);
-t.is(kompletCyrl, `123кјајаРетардАнјугпањокошКуРуЗЂЂЂ`);
-t.is(kompletLat,`jajaRetardAnjugPanj123kokošKuRuZĐĐĐ`);
-t.is(presumeCyrl,`123кјајаРетардАнјугпањокошКуРуЗЂЂЂ`);
-t.is(presumeLat,`jajaRetardAnjugPanj123kokošKuRuZĐĐĐ`);
+const kompletCyrl = preslovi(`"Čovek je rođen da radi, trpi i da se bori. Ko tako ne čini, mora propasti!" - Nikola Tesla`);
+const kompletLat = preslovi(`"Човек је рођен да ради, трпи и да се бори. Ко тако не чини, мора пропасти!" - Никола Тесла`);
+const presumeCyrl = preslovi(`"Човек је рођен да ради, trpi i da se bori. Ko tako ne čini, mora propasti!" - Nikola Tesla`);
+const presumeLat = preslovi(`"Čovek je rođen da radi, трпи и да се бори. Ко тако не чини, мора пропасти!" - Никола Тесла`);
+t.is(kompletCyrl, `"Човек је рођен да ради, трпи и да се бори. Ко тако не чини, мора пропасти!" - Никола Тесла`);
+t.is(kompletLat,`"Čovek je rođen da radi, trpi i da se bori. Ko tako ne čini, mora propasti!" - Nikola Tesla`);
+t.is(presumeCyrl,`"Човек је рођен да ради, трпи и да се бори. Ко тако не чини, мора пропасти!" - Никола Тесла`);
+t.is(presumeLat,`"Čovek je rođen da radi, trpi i da se bori. Ko tako ne čini, mora propasti!" - Nikola Tesla`);
 });
 test(`Специјали`, t => {
 	t.plan(4);

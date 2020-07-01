@@ -1,6 +1,9 @@
-A very simple package for changing characters from latin to cyrillic (Serbian) and vice versa, depending on which one is more abundant in text (it changes to the less abundant one).  
-  
-example:  
+# preslovljivac-js
+
+A simple transliteration library for Serbian language, written in Javascript and using ES Modules.
+
+## Usage
+
 ``` javascript  
 import preslovi from '@pionir/preslovljivac-js'; //loading the package  
 console.log(preslovi("text",'','n')); /*using it to write "text" to console in cyrillic, the output will be "текст" */  
@@ -8,16 +11,16 @@ console.log(preslovi("текст",'','Cyrl')); //output will be "text"
 ```  
   
 You can also give it a second parameter, in case you want something to remain unchanged.  
-For example, i want 'Microsoft' and 'Google' to remain the same:
+For example, I want 'Microsoft' and 'Google' to remain the same:
 ``` javascript  
 import preslovi from '@pionir/preslovljivac-js';
-console.log(preslovi("some text, Google Microsoft", "Google, Microsoft",'a'));  
-//the expected output is "соме текст, Google Microsoft"  
+console.log(preslovi("neki tekst, Google Microsoft", "Google, Microsoft",'a'));  
+//the expected output is "неки текст, Google Microsoft"  
 ```  
 Do note though that you need to write it as a string, with each entry divided by commas (,).  
   
 You can also pass a third parameter.  
-If the third parameter is a 'falsy' value, it will use the auto-detector that i built: https://www.npmjs.com/package/detektor.  
+If the third parameter is a 'falsy' value, it will use the auto-detector that i built: https://www.npmjs.com/package/@pionir/detektor-js.  
 It only counts through the first 512 characters, so if you have some massive strings it  won't count through the entire string, so it may not be 100% accurate if both are abundant throughout the text. It will convert every character no matter the length of the string,  though.  
 If you want to avoid this, you can give it a parameter 'Cyrl' for cyrillic, a non-empty string for latin.  
 For example:  
