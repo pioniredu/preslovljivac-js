@@ -1,4 +1,4 @@
-import odredi from '@pionir/detektor.js';
+import odredi from '@pionir/detektor-js';
 
 export default function preslovi(word, exceptions, type = '') {
     let tester = function () { };
