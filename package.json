@@ -1,6 +1,6 @@
 {
   "name": "@pionir/preslovljivac-js",
-  "version": "3.0.0",
+  "version": "3.0.5",
   "description": "A simple transliteration library for Serbian language, written in Javascript and using ES Modules. ",
   "main": "main.js",
   "scripts": {
