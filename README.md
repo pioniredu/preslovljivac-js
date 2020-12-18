@@ -2,6 +2,9 @@
 
 A simple transliteration library for Serbian language, written in Javascript and using ES Modules.
 
+[![Donate via PayPal](https://img.shields.io/badge/Donate-via_PayPal-2997d8.svg?labelColor=253b80)](https://paypal.me/zamphyr)
+[![Donate via OpenCollective](https://img.shields.io/badge/Donate-via_OpenCollective-3884ff.svg)](https://opencollective.com/pionir)
+
 ## Usage
 
 ``` javascript  
@@ -43,3 +46,12 @@ W (translated as "в").
   
 Here's a link to the npm page: https://www.npmjs.com/package/@pionir/preslovljivac-js  
 If you have any suggestions, feel free to send them to me. I'm always open for improvement.  
+
+## Donate
+This projects has been developed as part of the Pionir Free School. To help sustain the school we ask for your donation or sponsorship if you find this project useful. By donating or sponsoring you will be funding continuous development of this and other projects at Pionir.
+
+[![Donate via PayPal](https://img.shields.io/badge/Donate-via_PayPal-2997d8.svg?labelColor=253b80)](https://paypal.me/zamphyr)
+[![Donate via OpenCollective](https://img.shields.io/badge/Donate-via_OpenCollective-3884ff.svg)](https://opencollective.com/pionir)
+
+## Backers and sponsors
+![](https://opencollective.com/pionir/sponsors.svg?avatarHeight=32&button=false) ![](https://opencollective.com/pionir/backers.svg?avatarHeight=32&button=false)
