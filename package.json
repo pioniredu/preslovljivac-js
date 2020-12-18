@@ -4,7 +4,11 @@
   "description": "A simple transliteration library for Serbian language, written in Javascript and using ES Modules. ",
   "main": "main.js",
   "scripts": {
-    "test": "npx ava ./tests/test.js"
+    "test": "npx ava ./tests/test.js",
+    "postinstall": "opencollective-postinstall"
+  },
+  "collective": {
+    "url": "https://opencollective.com/pionir"
   },
   "devDependencies": {
     "ava": "^2.4.0"
@@ -26,7 +30,8 @@
   },
   "homepage": "https://github.com/pioniredu/preslovljivac-js#readme",
   "dependencies": {
-    "@pionir/detektor-js": "^2.0.0"
+    "@pionir/detektor-js": "^2.0.0",
+    "opencollective-postinstall": "^2.0.3"
   },
   "directories": {
     "test": "tests"
