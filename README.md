@@ -8,7 +8,7 @@ A simple transliteration library for Serbian language, written in Javascript and
 ## Usage
 
 ``` javascript  
-import preslovi from '@pionir/preslovljivac-js'; //loading the package  
+import preslovi from '@pionir/preslovljivac'; //loading the package  
 console.log(preslovi("text",'','n')); /*using it to write "text" to console in cyrillic, the output will be "текст" */  
 console.log(preslovi("текст",'','Cyrl')); //output will be "text"  
 ```  
@@ -16,7 +16,7 @@ console.log(preslovi("текст",'','Cyrl')); //output will be "text"
 You can also give it a second parameter, in case you want something to remain unchanged.  
 For example, I want 'Microsoft' and 'Google' to remain the same:
 ``` javascript  
-import preslovi from '@pionir/preslovljivac-js';
+import preslovi from '@pionir/preslovljivac';
 console.log(preslovi("neki tekst, Google Microsoft", "Google, Microsoft",'a'));  
 //the expected output is "неки текст, Google Microsoft"  
 ```  
@@ -28,7 +28,7 @@ It only counts through the first 512 characters, so if you have some massive str
 If you want to avoid this, you can give it a parameter 'Cyrl' for cyrillic, a non-empty string for latin.  
 For example:  
 ``` javascript  
-import preslovi from '@pionir/preslovljivac-js';
+import preslovi from '@pionir/preslovljivac';
 console.log(preslovi("text in latin",'','t')); //i passed t as the third parameter so that it isn't a 'falsy' value  
 //expected output is "текст ин латин"  
 console.log(preslovi("текст на ћирилици",'','Cyrl')); /*i passed 'Cyrl' as the third parameter, so now it will treat it as cyrillic text and the output will be "tekst na ćirilici"*/  
@@ -43,8 +43,7 @@ Q (translated as "ку"),
 X (translated as "кс"),  
 Y (translated as "иј"),  
 W (translated as "в").  
-  
-Here's a link to the npm page: https://www.npmjs.com/package/@pionir/preslovljivac-js  
+   
 If you have any suggestions, feel free to send them to me. I'm always open for improvement.  
 
 ## Donate

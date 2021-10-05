@@ -1,9 +1,9 @@
 {
-  "name": "@pionir/preslovljivac-js",
-  "version": "3.0.5",
+  "name": "@pionir/preslovljivac",
+  "version": "3.0.6",
   "description": "A simple transliteration library for Serbian language, written in Javascript and using ES Modules. ",
   "main": "main.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "test": "npx ava ./tests/test.js",
     "postinstall": "opencollective-postinstall"
